@@ -2,7 +2,7 @@
 
 Student: Daniyal Akylbek  
 Group: SE-2530
-
+https://ddsu5.github.io/web-asn4/
 ## Run
 
 Extract the ZIP and open index.html in a browser. Bootstrap 5.3.8 CSS is included locally, so the pages also work offline. No installation is needed.
