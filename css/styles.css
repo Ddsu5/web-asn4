@@ -1,0 +1,176 @@
+/* Shared layout for every page. Bootstrap is used on Tasks 2, 3 and 4. */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #233044;
+  background: #c0e1fadc;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #dee3eb;
+}
+.header-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  color: #233044;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.site-nav a {
+  padding: 6px 10px;
+  color: #344359;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: #ffffff;
+  background: #235cc4;
+}
+.page-content {
+  max-width: 880px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #dee3eb;
+  border-radius: 12px;
+}
+h1 {
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 22px;
+}
+.intro {
+  margin-bottom: 28px;
+  color: #566477;
+}
+.eyebrow {
+  color: #235cc4;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.task-list {
+  display: grid;
+  gap: 12px;
+}
+.task-list a {
+  padding: 18px;
+  color: #233044;
+  border: 1px solid #dee3eb;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.task-list a:hover {
+  background: #eef4ff;
+  border-color: #235cc4;
+}
+.task-list strong,
+.task-list span {
+  display: block;
+}
+.task-list span {
+  color: #566477;
+}
+.basic-form .field {
+  margin-bottom: 18px;
+}
+.basic-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+.basic-form input,
+.basic-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #aeb9c9;
+  border-radius: 6px;
+  font: inherit;
+}
+.basic-form textarea {
+  resize: vertical;
+}
+.basic-form input:focus,
+.basic-form textarea:focus {
+  outline: 2px solid #235cc4;
+  outline-offset: 2px;
+}
+.plain-button {
+  display: inline-block;
+  padding: 10px 18px;
+  color: #ffffff;
+  background: #235cc4;
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.plain-button:hover {
+  background: #18469a;
+}
+.field-legend {
+  float: none;
+  width: auto;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.examples {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid #dee3eb;
+}
+.site-footer {
+  padding: 0 20px 30px;
+  color: #566477;
+  text-align: center;
+  font-size: 14px;
+}
+#message {
+  resize: none;
+}
+/* Bootstrap's .was-validated uses :valid and :invalid in its CSS. */
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+  background-color: #fffafa;
+}
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+  background-color: #f8fff9;
+}
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .page-content {
+    margin: 20px 12px;
+    padding: 22px 18px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+}

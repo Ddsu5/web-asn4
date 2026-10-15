@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment 4: HTML forms, Bootstrap styling and CSS validation.">
+  <title>Task 4 — Registration | Assignment 4</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Forms Lab</a>
+      <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Tasks 0 &amp; 1</a>
+          <a href="task2.html">Task 2</a>
+          <a href="task3.html">Task 3</a>
+          <a href="task4.html" aria-current="page">Task 4</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+    <h1>Create an account</h1>
+    <p class="intro">Complete the registration form. Required fields display validation feedback.</p>
+    <form action="success.html" method="get" class="row g-3 was-validated">
+      <div class="col-md-6">
+        <label for="first-name" class="form-label">First name</label>
+        <input type="text" class="form-control" id="first-name" name="first-name" required maxlength="50" autocomplete="given-name">
+        <div class="invalid-feedback">Enter your first name.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="last-name" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="last-name" name="last-name" required maxlength="50" autocomplete="family-name">
+        <div class="invalid-feedback">Enter your last name.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required maxlength="100" autocomplete="email">
+        <div class="invalid-feedback">Enter a valid email address.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" required minlength="8" maxlength="64" autocomplete="new-password">
+        <div class="form-text">Choose a password with at least 8 characters.</div>
+        <div class="invalid-feedback">Use 8 to 64 characters.</div>
+        <div class="valid-feedback">Length is valid.</div>
+      </div>
+      <div class="col-md-6">
+        <label for="confirm-password" class="form-label">Confirm password</label>
+        <input type="password" class="form-control" id="confirm-password" required minlength="8" maxlength="64" autocomplete="new-password">
+        <div class="form-text">Repeat your password. Each password field is checked for length only.</div>
+        <div class="invalid-feedback">Use 8 to 64 characters.</div>
+        <div class="valid-feedback">Length is valid.</div>
+      </div>
+      <div class="col-md-6">
+        <label for="country" class="form-label">Country</label>
+        <select class="form-select" id="country" name="country" required>
+          <option value="" selected disabled>Choose a country</option>
+          <option value="kz">Kazakhstan</option>
+          <option value="uz">Japan</option>
+          <option value="tr">Türkiye</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="invalid-feedback">Select your country.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <fieldset class="col-md-6">
+        <legend class="field-legend">Gender (required)</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="undisclosed" value="undisclosed" required>
+          <label class="form-check-label" for="undisclosed">Prefer not to say</label>
+          <div class="invalid-feedback">Select one option.</div>
+        </div>
+      </fieldset>
+      <fieldset class="col-md-6">
+        <legend class="field-legend">Hobbies (optional)</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="hobbies" id="coding" value="coding">
+          <label class="form-check-label" for="coding">Coding</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="hobbies" id="reading" value="reading">
+          <label class="form-check-label" for="reading">Reading</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="hobbies" id="sports" value="sports">
+          <label class="form-check-label" for="sports">Sports</label>
+        </div>
+      </fieldset>
+      <div class="col-12 d-flex gap-2">
+        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-outline-secondary" type="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+  <footer class="site-footer">Daniyal Akylbek · SE-2530 · Assignment 4</footer>
+</body>
+</html>
